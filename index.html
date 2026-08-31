@@ -1,226 +1,1161 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#07100b">
-  <title>DHRISHTI | Intelligent Border Surveillance</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DHRISHTI | Intelligent Surveillance</title>
+
+    <link rel="icon" type="image/png" href="dhrishti-logo.png">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div class="app-shell">
-    <aside class="sidebar" id="sidebar">
-      <div class="brand">
-        <div class="brand-mark">◈</div>
-        <div>
-          <strong>DHRISHTI</strong>
-          <span>INTELLIGENT SURVEILLANCE</span>
+
+<div class="app">
+
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                <img src="dhrishti-logo.png" alt="DHRISHTI Logo">
+            </div>
+
+            <div class="brand-text">
+                <h2>DHRISHTI</h2>
+                <span>INTELLIGENT SURVEILLANCE</span>
+            </div>
+
         </div>
-      </div>
 
-      <nav class="nav">
-        <div class="nav-label">COMMAND CENTER</div>
-        <button class="nav-item active" data-page="dashboard"><span>▦</span> Dashboard</button>
-        <button class="nav-item" data-page="surveillance"><span>◉</span> Live Surveillance</button>
-        <button class="nav-item" data-page="detection"><span>⌁</span> AI Detection</button>
-        <button class="nav-item" data-page="alerts"><span>⚠</span> Incident Alerts <b>07</b></button>
-        <button class="nav-item" data-page="map"><span>⌖</span> Border Map</button>
 
-        <div class="nav-label">ANALYTICS</div>
-        <button class="nav-item" data-page="analytics"><span>▤</span> Analytics</button>
-        <button class="nav-item" data-page="logs"><span>◷</span> Activity Logs</button>
-        <button class="nav-item" data-page="settings"><span>⚙</span> System Settings</button>
-      </nav>
+        <div class="menu-title">
+            COMMAND CENTER
+        </div>
 
-      <div class="sidebar-status">
-        <div class="status-title">INFRASTRUCTURE STATUS</div>
-        <div class="status-online"><i></i> All systems operational</div>
-      </div>
+
+        <nav>
+
+            <button class="nav-item active" data-page="dashboard">
+                <span class="nav-icon">▦</span>
+                <span>Dashboard</span>
+            </button>
+
+            <button class="nav-item" data-page="surveillance">
+                <span class="nav-icon">◉</span>
+                <span>Live Surveillance</span>
+            </button>
+
+            <button class="nav-item" data-page="detection">
+                <span class="nav-icon">⌁</span>
+                <span>AI Detection</span>
+            </button>
+
+            <button class="nav-item" data-page="alerts">
+                <span class="nav-icon">⚠</span>
+                <span>Incident Alerts</span>
+                <span class="badge">07</span>
+            </button>
+
+            <button class="nav-item" data-page="map">
+                <span class="nav-icon">⌖</span>
+                <span>Border Map</span>
+            </button>
+
+        </nav>
+
+
+        <div class="menu-title">
+            ANALYTICS
+        </div>
+
+
+        <nav>
+
+            <button class="nav-item" data-page="analytics">
+                <span class="nav-icon">▤</span>
+                <span>Analytics</span>
+            </button>
+
+            <button class="nav-item" data-page="logs">
+                <span class="nav-icon">◷</span>
+                <span>Activity Logs</span>
+            </button>
+
+            <button class="nav-item" data-page="settings">
+                <span class="nav-icon">⚙</span>
+                <span>System Settings</span>
+            </button>
+
+        </nav>
+
+
+        <!-- SIDEBAR BOTTOM -->
+
+        <div class="sidebar-bottom">
+
+            <div class="status-box">
+
+                <div class="status-title">
+                    Infrastructure Status
+                </div>
+
+                <div class="online">
+                    <span class="status-dot"></span>
+                    All systems operational
+                </div>
+
+            </div>
+
+
+            <div class="secure">
+
+                <div class="secure-icon">
+                    ◈
+                </div>
+
+                <div>
+                    <strong>SECURE SYSTEM</strong>
+                    <small>Encrypted surveillance network</small>
+                </div>
+
+            </div>
+
+        </div>
+
     </aside>
 
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
     <main class="main">
-      <header class="topbar">
-        <div class="topbar-left">
-          <button class="mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
-          <div>
-            <div class="eyebrow">NATIONAL BORDER MONITORING NETWORK</div>
-            <h1 id="pageTitle">Surveillance Overview</h1>
-            <p id="pageSubtitle">AI-powered border monitoring and intelligent video analytics</p>
-          </div>
-        </div>
-        <div class="topbar-right">
-          <div class="engine-status"><i></i> AI ENGINE ONLINE</div>
-          <div class="clock" id="clock">--:--:--</div>
-          <div class="operator">
-            <div class="avatar">OP</div>
-            <div class="operator-copy"><strong>Operator</strong><span>Control Room</span></div>
-          </div>
-        </div>
-      </header>
 
-      <section class="stats" aria-label="System statistics">
-        <article class="stat-card">
-          <div class="stat-icon">▣</div>
-          <div class="stat-content">
-            <span>ACTIVE CAMERAS</span>
-            <strong>48</strong>
-            <small class="positive">● 48 / 48 operational</small>
-          </div>
-        </article>
-        <article class="stat-card">
-          <div class="stat-icon">⌁</div>
-          <div class="stat-content">
-            <span>AI DETECTIONS</span>
-            <strong id="detectionCount">126</strong>
-            <small class="positive">↑ 12% from last hour</small>
-          </div>
-        </article>
-        <article class="stat-card alert-stat">
-          <div class="stat-icon">⚠</div>
-          <div class="stat-content">
-            <span>ACTIVE ALERTS</span>
-            <strong>07</strong>
-            <small class="warning">3 require attention</small>
-          </div>
-        </article>
-        <article class="stat-card">
-          <div class="stat-icon">◎</div>
-          <div class="stat-content">
-            <span>AI ACCURACY</span>
-            <strong>96.8%</strong>
-            <small class="positive">↑ 1.4% this week</small>
-          </div>
-        </article>
-      </section>
 
-      <section class="dashboard-grid">
-        <article class="panel cctv-panel">
-          <div class="panel-header">
-            <div>
-              <h2>Live CCTV Surveillance</h2>
-              <p>Existing infrastructure • AI analysis active</p>
-            </div>
-            <span class="live-pill"><i></i> LIVE</span>
-          </div>
-          <div class="camera-grid">
-            <div class="camera camera-one">
-              <div class="camera-overlay"></div>
-              <span class="camera-label">CAM-01 • NORTH SECTOR</span>
-              <span class="camera-time">22:41:08</span>
-              <div class="camera-center"><strong>◉</strong><span>LIVE FEED</span></div>
-              <div class="detection-box person"><b>PERSON 94%</b></div>
-            </div>
-            <div class="camera camera-two">
-              <div class="camera-overlay"></div>
-              <span class="camera-label">CAM-07 • EAST SECTOR</span>
-              <span class="camera-time">22:41:11</span>
-              <div class="camera-center"><strong>◉</strong><span>LIVE FEED</span></div>
-            </div>
-            <div class="camera camera-three">
-              <div class="camera-overlay"></div>
-              <span class="camera-label">CAM-12 • CHECKPOINT</span>
-              <span class="camera-time">22:41:16</span>
-              <div class="camera-center"><strong>◉</strong><span>LIVE FEED</span></div>
-              <div class="detection-box vehicle"><b>VEHICLE 91%</b></div>
-            </div>
-            <div class="camera camera-four">
-              <div class="camera-overlay"></div>
-              <span class="camera-label">CAM-19 • WEST SECTOR</span>
-              <span class="camera-time">22:41:21</span>
-              <div class="camera-center"><strong>◉</strong><span>LIVE FEED</span></div>
-            </div>
-          </div>
-        </article>
+        <!-- =========================
+             DASHBOARD
+        ========================== -->
 
-        <article class="panel alerts-panel">
-          <div class="panel-header">
-            <div>
-              <h2>AI Incident Alerts</h2>
-              <p>Real-time detection events</p>
+        <section id="dashboard" class="page active-page">
+
+
+            <!-- TOP BAR -->
+
+            <header class="topbar">
+
+                <div>
+
+                    <div class="location">
+                        ● BORDER SURVEILLANCE COMMAND
+                    </div>
+
+                    <h1>
+                        Surveillance Overview
+                    </h1>
+
+                    <p>
+                        AI-powered border monitoring and intelligent video analytics
+                    </p>
+
+                </div>
+
+
+                <div class="header-right">
+
+                    <div class="ai-status">
+                        ● AI ENGINE ONLINE
+                    </div>
+
+                    <div class="time" id="liveTime">
+                        00:00:00
+                    </div>
+
+                    <div class="operator">
+
+                        <div class="operator-avatar">
+                            OP
+                        </div>
+
+                        <div>
+                            <strong>OPERATOR</strong>
+                            <small>Control Room</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- =========================
+                 STATISTICS
+            ========================== -->
+
+            <section class="stats">
+
+
+                <!-- ACTIVE CAMERAS -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        ▣
+                    </div>
+
+                    <div>
+
+                        <span>
+                            ACTIVE CAMERAS
+                        </span>
+
+                        <strong>
+                            48
+                        </strong>
+
+                        <small class="positive">
+                            ● 48 / 48 operational
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- AI DETECTIONS -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        ⌁
+                    </div>
+
+                    <div>
+
+                        <span>
+                            AI DETECTIONS
+                        </span>
+
+                        <strong>
+                            126
+                        </strong>
+
+                        <small class="positive">
+                            ↑ 12% from last hour
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ACTIVE ALERTS -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        ⚠
+                    </div>
+
+                    <div>
+
+                        <span>
+                            ACTIVE ALERTS
+                        </span>
+
+                        <strong>
+                            07
+                        </strong>
+
+                        <small class="warning">
+                            3 require attention
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- AI ACCURACY -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        ◎
+                    </div>
+
+                    <div>
+
+                        <span>
+                            AI ACCURACY
+                        </span>
+
+                        <strong>
+                            96.8%
+                        </strong>
+
+                        <small class="positive">
+                            ↑ 1.4% this week
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 MAIN GRID
+            ========================== -->
+
+            <div class="main-grid">
+
+
+                <!-- =========================
+                     CCTV PANEL
+                ========================== -->
+
+                <section class="panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <h3>
+                                Live CCTV Surveillance
+                            </h3>
+
+                            <span>
+                                Existing infrastructure • AI analysis active
+                            </span>
+
+                        </div>
+
+                        <span class="live-badge">
+                            ● LIVE
+                        </span>
+
+                    </div>
+
+
+                    <div class="camera-grid">
+
+
+                        <!-- CAMERA 01 -->
+
+                        <div class="camera">
+
+                            <div class="camera-image camera-one">
+
+                                <div class="camera-label">
+                                    CAM-01 • NORTH SECTOR
+                                </div>
+
+                                <div class="camera-live">
+                                    ● LIVE
+                                </div>
+
+                                <div class="camera-center">
+
+                                    <strong>
+                                        ◉
+                                    </strong>
+
+                                    LIVE FEED
+
+                                </div>
+
+
+                                <div class="detection-box">
+
+                                    <span>
+                                        PERSON 94%
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="camera-info">
+
+                                <span>
+                                    North Sector Surveillance
+                                </span>
+
+                                <small>
+                                    AI PERSON DETECTION ACTIVE
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- CAMERA 07 -->
+
+                        <div class="camera">
+
+                            <div class="camera-image camera-two">
+
+                                <div class="camera-label">
+                                    CAM-07 • EAST SECTOR
+                                </div>
+
+                                <div class="camera-live">
+                                    ● LIVE
+                                </div>
+
+                                <div class="camera-center">
+
+                                    <strong>
+                                        ◉
+                                    </strong>
+
+                                    LIVE FEED
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="camera-info">
+
+                                <span>
+                                    East Sector Surveillance
+                                </span>
+
+                                <small>
+                                    MONITORING ACTIVE
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- CAMERA 12 -->
+
+                        <div class="camera">
+
+                            <div class="camera-image camera-three">
+
+                                <div class="camera-label">
+                                    CAM-12 • CHECKPOINT
+                                </div>
+
+                                <div class="camera-live">
+                                    ● LIVE
+                                </div>
+
+                                <div class="camera-center">
+
+                                    <strong>
+                                        ◉
+                                    </strong>
+
+                                    LIVE FEED
+
+                                </div>
+
+
+                                <div class="detection-box vehicle">
+
+                                    <span>
+                                        VEHICLE 91%
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="camera-info">
+
+                                <span>
+                                    Checkpoint Surveillance
+                                </span>
+
+                                <small>
+                                    AI VEHICLE DETECTION ACTIVE
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- CAMERA 19 -->
+
+                        <div class="camera">
+
+                            <div class="camera-image camera-four">
+
+                                <div class="camera-label">
+                                    CAM-19 • WEST SECTOR
+                                </div>
+
+                                <div class="camera-live">
+                                    ● LIVE
+                                </div>
+
+                                <div class="camera-center">
+
+                                    <strong>
+                                        ◉
+                                    </strong>
+
+                                    LIVE FEED
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="camera-info">
+
+                                <span>
+                                    West Sector Surveillance
+                                </span>
+
+                                <small>
+                                    MOTION ANALYSIS ACTIVE
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =========================
+                     ALERT PANEL
+                ========================== -->
+
+                <section class="panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <h3>
+                                AI Incident Alerts
+                            </h3>
+
+                            <span>
+                                Real-time detection events
+                            </span>
+
+                        </div>
+
+                        <span class="live-badge">
+                            07 ACTIVE
+                        </span>
+
+                    </div>
+
+
+                    <div class="alert-list">
+
+
+                        <div class="alert-item critical">
+
+                            <div class="alert-icon">
+                                ⚠
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Unusual Movement Detected
+                                </strong>
+
+                                <span>
+                                    North Sector • Confidence 94%
+                                </span>
+
+                                <small>
+                                    2 min ago
+                                </small>
+
+                            </div>
+
+                            <button>
+                                VIEW
+                            </button>
+
+                        </div>
+
+
+                        <div class="alert-item high">
+
+                            <div class="alert-icon">
+                                ◉
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Person Detected
+                                </strong>
+
+                                <span>
+                                    East Sector • Confidence 91%
+                                </span>
+
+                                <small>
+                                    5 min ago
+                                </small>
+
+                            </div>
+
+                            <button>
+                                VIEW
+                            </button>
+
+                        </div>
+
+
+                        <div class="alert-item medium">
+
+                            <div class="alert-icon">
+                                ▣
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Vehicle Detected
+                                </strong>
+
+                                <span>
+                                    Checkpoint • Confidence 89%
+                                </span>
+
+                                <small>
+                                    8 min ago
+                                </small>
+
+                            </div>
+
+                            <button>
+                                VIEW
+                            </button>
+
+                        </div>
+
+
+                        <div class="alert-item normal">
+
+                            <div class="alert-icon">
+                                ⌁
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Motion Pattern Detected
+                                </strong>
+
+                                <span>
+                                    West Sector • Confidence 86%
+                                </span>
+
+                                <small>
+                                    11 min ago
+                                </small>
+
+                            </div>
+
+                            <button>
+                                VIEW
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
             </div>
-            <span class="count-pill">07 ACTIVE</span>
-          </div>
-          <div class="alert-list">
-            <button class="alert-item critical">
-              <span class="alert-icon">⚠</span>
-              <span class="alert-copy"><strong>Unusual Movement Detected</strong><small>North Sector • Confidence 94%</small><em>2 min ago</em></span>
-              <span class="severity">HIGH</span>
-            </button>
-            <button class="alert-item">
-              <span class="alert-icon">◉</span>
-              <span class="alert-copy"><strong>Person Detected</strong><small>East Sector • Confidence 91%</small><em>5 min ago</em></span>
-              <span class="severity normal">INFO</span>
-            </button>
-            <button class="alert-item">
-              <span class="alert-icon">▣</span>
-              <span class="alert-copy"><strong>Vehicle Detected</strong><small>Checkpoint • Confidence 89%</small><em>8 min ago</em></span>
-              <span class="severity normal">INFO</span>
-            </button>
-            <button class="alert-item">
-              <span class="alert-icon">⌁</span>
-              <span class="alert-copy"><strong>Motion Pattern Detected</strong><small>West Sector • Confidence 86%</small><em>11 min ago</em></span>
-              <span class="severity normal">INFO</span>
-            </button>
-          </div>
-        </article>
 
-        <article class="panel map-panel">
-          <div class="panel-header">
-            <div>
-              <h2>Border Activity Map</h2>
-              <p>AI monitored surveillance zones</p>
+
+            <!-- =========================
+                 BOTTOM GRID
+            ========================== -->
+
+            <div class="bottom-grid">
+
+
+                <!-- BORDER MAP -->
+
+                <section class="panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <h3>
+                                Border Activity Map
+                            </h3>
+
+                            <span>
+                                AI monitored surveillance zones
+                            </span>
+
+                        </div>
+
+                        <span class="live-badge">
+                            LIVE MAP
+                        </span>
+
+                    </div>
+
+
+                    <div class="map">
+
+                        <div class="map-grid"></div>
+
+                        <div class="route route-one"></div>
+
+                        <div class="route route-two"></div>
+
+                        <div class="border-line"></div>
+
+
+                        <div class="map-point green p1"></div>
+
+                        <div class="map-point red p2"></div>
+
+                        <div class="map-point green p3"></div>
+
+                        <div class="map-point yellow p4"></div>
+
+                        <div class="map-point green p5"></div>
+
+
+                        <div class="map-label">
+
+                            NORTH BORDER ZONE
+
+                            <small>
+                                48 cameras • 3 monitored zones
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- AI SUMMARY -->
+
+                <section class="panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <h3>
+                                AI Detection Summary
+                            </h3>
+
+                            <span>
+                                Current monitoring session
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="detection-summary">
+
+
+                        <div class="detection-row">
+
+                            <div class="detection-top">
+
+                                <span>
+                                    Person Detection
+                                </span>
+
+                                <span>
+                                    94%
+                                </span>
+
+                            </div>
+
+                            <div class="progress">
+                                <span class="progress-person"></span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="detection-row">
+
+                            <div class="detection-top">
+
+                                <span>
+                                    Vehicle Detection
+                                </span>
+
+                                <span>
+                                    91%
+                                </span>
+
+                            </div>
+
+                            <div class="progress">
+                                <span class="progress-vehicle"></span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="detection-row">
+
+                            <div class="detection-top">
+
+                                <span>
+                                    Motion Analysis
+                                </span>
+
+                                <span>
+                                    86%
+                                </span>
+
+                            </div>
+
+                            <div class="progress">
+                                <span class="progress-motion"></span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="detection-row">
+
+                            <div class="detection-top">
+
+                                <span>
+                                    Object Detection
+                                </span>
+
+                                <span>
+                                    79%
+                                </span>
+
+                            </div>
+
+                            <div class="progress">
+                                <span class="progress-object"></span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
             </div>
-            <span class="live-pill"><i></i> LIVE MAP</span>
-          </div>
-          <div class="map">
-            <div class="map-grid"></div>
-            <div class="border-line"></div>
-            <div class="zone"></div>
-            <span class="map-label north">NORTH SECTOR</span>
-            <span class="map-label east">EAST CHECKPOINT</span>
-            <span class="map-label zone-c">ZONE C</span>
-            <button class="map-marker marker-one" title="North sector"></button>
-            <button class="map-marker marker-two" title="Checkpoint"></button>
-            <button class="map-marker marker-three" title="Zone C"></button>
-          </div>
-          <div class="map-footer">
-            <span>● 48 Cameras Online</span><span>3 Monitored Zones</span><span>7 Active Events</span>
-          </div>
-        </article>
 
-        <article class="panel analytics-panel">
-          <div class="panel-header">
-            <div>
-              <h2>AI Detection Summary</h2>
-              <p>Current monitoring session</p>
+        </section>
+
+
+        <!-- =========================
+             LIVE SURVEILLANCE PAGE
+        ========================== -->
+
+        <section id="surveillance" class="page">
+
+            <div class="page-card">
+
+                <h2>
+                    Live Surveillance
+                </h2>
+
+                <p>
+                    Monitor all connected CCTV infrastructure in real time.
+                </p>
+
+                <div class="large-placeholder">
+                    LIVE SURVEILLANCE MODULE
+                </div>
+
             </div>
-          </div>
-          <div class="progress-list">
-            <div class="progress-row"><div><span>Person Detection</span><b>94%</b></div><div class="progress"><i style="width:94%"></i></div></div>
-            <div class="progress-row"><div><span>Vehicle Detection</span><b>91%</b></div><div class="progress"><i style="width:91%"></i></div></div>
-            <div class="progress-row"><div><span>Motion Analysis</span><b>86%</b></div><div class="progress"><i style="width:86%"></i></div></div>
-            <div class="progress-row"><div><span>Threat Classification</span><b>89%</b></div><div class="progress"><i style="width:89%"></i></div></div>
-          </div>
-          <div class="mini-metrics">
-            <div><span>PROCESSING</span><strong>28 FPS</strong></div>
-            <div><span>LATENCY</span><strong>42 ms</strong></div>
-            <div><span>MODEL</span><strong>YOLO</strong></div>
-          </div>
-        </article>
-      </section>
 
-      <section class="page-placeholder" id="pagePlaceholder">
-        <div class="placeholder-icon">◈</div>
-        <h2 id="placeholderTitle">Dashboard</h2>
-        <p>This section is ready for backend integration.</p>
-      </section>
+        </section>
 
-      <footer class="footer">
-        <span>DHRISHTI • INTELLIGENT BORDER VIDEO ANALYTICS</span>
-        <span>SECURE MONITORING NETWORK</span>
-      </footer>
+
+        <!-- =========================
+             AI DETECTION PAGE
+        ========================== -->
+
+        <section id="detection" class="page">
+
+            <div class="page-card">
+
+                <h2>
+                    AI Detection
+                </h2>
+
+                <p>
+                    AI-powered person, vehicle, object and motion detection.
+                </p>
+
+                <div class="large-placeholder">
+                    AI DETECTION MODULE
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ALERT PAGE
+        ========================== -->
+
+        <section id="alerts" class="page">
+
+            <div class="page-card">
+
+                <h2>
+                    Incident Alerts
+                </h2>
+
+                <p>
+                    Review and manage AI-generated surveillance incidents.
+                </p>
+
+                <div class="large-placeholder">
+                    INCIDENT ALERT MODULE
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             MAP PAGE
+        ========================== -->
+
+        <section id="map" class="page">
+
+            <div class="page-card">
+
+                <h2>
+                    Border Map
+                </h2>
+
+                <p>
+                    View monitored border zones, cameras and detected events.
+                </p>
+
+                <div class="large-placeholder">
+                    BORDER MAP MODULE
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ANALYTICS PAGE
+        ========================== -->
+
+        <section id="analytics" class="page">
+
+            <div class="page-card">
+
+                <h2>
+                    Analytics
+                </h2>
+
+                <p>
+                    Analyze surveillance activity and AI detection performance.
+                </p>
+
+                <div class="large-placeholder">
+                    ANALYTICS MODULE
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             LOGS PAGE
+        ========================== -->
+
+        <section id="logs" class="page">
+
+            <div class="page-card">
+
+                <h2>
+                    Activity Logs
+                </h2>
+
+                <p>
+                    Review system activity and surveillance event history.
+                </p>
+
+                <div class="large-placeholder">
+                    ACTIVITY LOG MODULE
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SETTINGS PAGE
+        ========================== -->
+
+        <section id="settings" class="page">
+
+            <div class="page-card">
+
+                <h2>
+                    System Settings
+                </h2>
+
+                <p>
+                    Configure surveillance and AI monitoring preferences.
+                </p>
+
+                <div class="large-placeholder">
+                    SYSTEM SETTINGS MODULE
+                </div>
+
+            </div>
+
+        </section>
+
     </main>
-  </div>
-  <script src="script.js"></script>
+
+</div>
+
+
+<script>
+
+    /* =========================
+       LIVE CLOCK
+    ========================== */
+
+    function updateClock() {
+
+        const clock = document.getElementById("liveTime");
+
+        if (!clock) {
+            return;
+        }
+
+        const now = new Date();
+
+        const hours = String(now.getHours()).padStart(2, "0");
+        const minutes = String(now.getMinutes()).padStart(2, "0");
+        const seconds = String(now.getSeconds()).padStart(2, "0");
+
+        clock.textContent =
+            `${hours}:${minutes}:${seconds}`;
+    }
+
+    updateClock();
+
+    setInterval(updateClock, 1000);
+
+
+    /* =========================
+       PAGE NAVIGATION
+    ========================== */
+
+    const navItems =
+        document.querySelectorAll(".nav-item");
+
+    const pages =
+        document.querySelectorAll(".page");
+
+
+    navItems.forEach(item => {
+
+        item.addEventListener("click", () => {
+
+            const pageId =
+                item.getAttribute("data-page");
+
+            if (!pageId) {
+                return;
+            }
+
+
+            navItems.forEach(nav => {
+                nav.classList.remove("active");
+            });
+
+            item.classList.add("active");
+
+
+            pages.forEach(page => {
+                page.classList.remove("active-page");
+            });
+
+
+            const selectedPage =
+                document.getElementById(pageId);
+
+            if (selectedPage) {
+                selectedPage.classList.add("active-page");
+            }
+
+        });
+
+    });
+
+
+    /* =========================
+       ALERT BUTTONS
+    ========================== */
+
+    const alertButtons =
+        document.querySelectorAll(".alert-item button");
+
+
+    alertButtons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            button.textContent = "OPENED";
+
+            setTimeout(() => {
+
+                button.textContent = "VIEW";
+
+            }, 1500);
+
+        });
+
+    });
+
+</script>
+
 </body>
 </html>
